@@ -12,18 +12,19 @@ namespace Joker_APIGroupProject.Controllers
     public class SpyController : ControllerBase
     {
 
-        public SpyController(ISpy spyRepository)
+        public SpyController(ISpy SpyRepository)
         {
-            _spyRepo = spyRepository;
+            _spyRepo = SpyRepository;
         }
 
         private ISpy _spyRepo;
 
+
         // GET: api/<ValuesController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<Spy> GetAllSpies()
         {
-            return new string[] { "value1", "value2" };
+            return _spyRepo.GetAll();
         }
 
         // GET api/<ValuesController>/5
