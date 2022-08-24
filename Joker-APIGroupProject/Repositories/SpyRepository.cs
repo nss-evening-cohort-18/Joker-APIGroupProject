@@ -42,7 +42,7 @@ namespace Joker_APIGroupProject.Repositories
         
 public List<Spy> GetAll()
         {
-            throw new NotImplementedException();
+            return _spies;
         }
 
         public Spy GetById(int id)
