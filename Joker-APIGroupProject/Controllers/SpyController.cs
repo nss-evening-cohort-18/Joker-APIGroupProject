@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Joker_APIGroupProject.Interface;
+using Joker_APIGroupProject.Models;
+using Joker_APIGroupProject.Repositories;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -8,6 +11,14 @@ namespace Joker_APIGroupProject.Controllers
     [ApiController]
     public class SpyController : ControllerBase
     {
+
+        public SpyController(ISpy spyRepository)
+        {
+            _spyRepo = spyRepository;
+        }
+
+        private ISpy _spyRepo;
+
         // GET: api/<ValuesController>
         [HttpGet]
         public IEnumerable<string> Get()

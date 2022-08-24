@@ -38,7 +38,8 @@ namespace Joker_APIGroupProject.Repositories
                 OriginStory = "Mommy Issues",
                 Services = new() { "Assassinations", "Cover-Ups" }
             }
-        }
+        };
+        
 public List<Spy> GetAll()
         {
             throw new NotImplementedException();
@@ -48,5 +49,6 @@ public List<Spy> GetAll()
         {
             throw new NotImplementedException();
         }
+
     }
 }
