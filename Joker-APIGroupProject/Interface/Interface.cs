@@ -7,5 +7,6 @@ namespace Joker_APIGroupProject.Interface
     {
         Spy GetById(int id);
         List<Spy> GetAll();
+        public bool Create(Spy value);
     }
 }
