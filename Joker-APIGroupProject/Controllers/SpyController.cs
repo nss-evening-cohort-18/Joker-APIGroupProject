@@ -28,9 +28,9 @@ namespace Joker_APIGroupProject.Controllers
 
         // GET api/<ValuesController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public Spy Get(int id)
         {
-            return "value";
+            return _spyRepo.GetById(id);
         }
 
         // POST api/<ValuesController>
