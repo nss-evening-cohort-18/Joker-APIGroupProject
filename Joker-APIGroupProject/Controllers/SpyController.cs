@@ -42,8 +42,13 @@ namespace Joker_APIGroupProject.Controllers
 
         // POST api/<ValuesController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] Spy value)
         {
+            if (_spyRepo.Create(value))
+            {
+                return Created("", value);
+            };
+            return NotFound();
         }
 
         // PUT api/<ValuesController>/5
