@@ -1,6 +1,11 @@
-﻿namespace Joker_APIGroupProject.Interface
+﻿using Joker_APIGroupProject.Models;
+
+
+namespace Joker_APIGroupProject.Interface
 {
     public interface ISpy
     {
+        Spy GetById(int id);
+        List<Spy> GetAll();
     }
 }
