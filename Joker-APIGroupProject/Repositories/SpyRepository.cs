@@ -47,7 +47,7 @@ public List<Spy> GetAll()
 
         public Spy GetById(int id)
         {
-            throw new NotImplementedException();
+            return _spies.FirstOrDefault(p => p.Id == id);
         }
 
     }
