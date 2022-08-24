@@ -45,6 +45,12 @@ public List<Spy> GetAll()
             return _spies;
         }
 
+        public List<string> GetEnemiesById(int id)
+        {
+            return _spies.FirstOrDefault(p => p.Id == id).Enemies;
+
+        }
+
         public Spy GetById(int id)
         {
             return _spies.FirstOrDefault(p => p.Id == id);

@@ -34,6 +34,12 @@ namespace Joker_APIGroupProject.Controllers
             return _spyRepo.GetById(id);
         }
 
+        [HttpGet("{id}")]
+        public List <string> GetEnemiesById(int id)
+        {
+            return _spyRepo.GetEnemiesById(id);
+        }
+
         // POST api/<ValuesController>
         [HttpPost]
         public void Post([FromBody] string value)
