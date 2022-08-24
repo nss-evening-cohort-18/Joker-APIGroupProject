@@ -50,5 +50,12 @@ public List<Spy> GetAll()
             return _spies.FirstOrDefault(p => p.Id == id);
         }
 
+        public bool Create(Spy value)
+        {
+            _spies.Add(value);
+            return true;
+        }
+
+       
     }
 }
