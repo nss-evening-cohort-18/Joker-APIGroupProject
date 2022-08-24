@@ -14,7 +14,7 @@ namespace Joker_APIGroupProject.Repositories
                 UserName = "MojoMan",
                 Skills = new() {"Womanizer", "Time-Travel", "Mystery"},
                 Friends = new() { },
-                Enemies = new() { },
+                Enemies = new() { "077" },
                 OriginStory = "Daddy Issues",
                 Services = new() {"Dancing", "Rescue"}
             },
