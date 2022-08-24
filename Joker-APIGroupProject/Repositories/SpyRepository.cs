@@ -12,6 +12,6 @@ namespace Joker_APIGroupProject.Repositories
             {
 
             }
-        }
+        };
     }
 }
