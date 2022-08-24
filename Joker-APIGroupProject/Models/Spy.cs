@@ -2,13 +2,13 @@
 {
     public class Spy
     {
-        public int id { get; set; }
-        public string userName { get; set; }
-        public List<string> skills { get; set; }
-        public List<string> friends { get; set; }
-        public List<string> enemies { get; set; }
-        public string originStory { get; set; }
-        public List <string> services { get; set; }
+        public int Id { get; set; }
+        public string UserName { get; set; }
+        public List<string> Skills { get; set; }
+        public List<string> Friends { get; set; }
+        public List<string> Enemies { get; set; }
+        public string OriginStory { get; set; }
+        public List <string> Services { get; set; }
 
 
 
