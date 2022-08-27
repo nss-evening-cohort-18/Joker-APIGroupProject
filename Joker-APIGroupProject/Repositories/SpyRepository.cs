@@ -6,11 +6,12 @@ namespace Joker_APIGroupProject.Repositories
 {
     public class SpyRepository : ISpy
     {
-        private static List<Spy> _spies = new();
+        private static List<Spy> _spiesBySkill = new();
 
-        private static List<Spy> _spiesBySkill = new()
-        
+        private static List<Spy> _spies = new()
+
         {
+          
             new Spy()
             {
                 Id = 1,
