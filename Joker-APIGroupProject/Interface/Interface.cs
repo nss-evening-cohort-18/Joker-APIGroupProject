@@ -13,6 +13,8 @@ namespace Joker_APIGroupProject.Interface
 
         List<Spy> GetSpysBySkill(string skill);
 
+        List<String> GetAllSkills();
+
         List<Spy> GetAll();
 
         public bool Create(Spy value);
