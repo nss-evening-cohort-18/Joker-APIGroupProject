@@ -13,7 +13,6 @@ namespace Joker_APIGroupProject.Repositories
         private static List<Spy> _spies = new()
 
         {
-          
             new Spy()
             {
                 Id = 1,
