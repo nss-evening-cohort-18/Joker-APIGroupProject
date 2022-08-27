@@ -11,7 +11,11 @@ namespace Joker_APIGroupProject.Interface
 
         List<string> GetFriendsById(int id);
 
+        List<Spy> GetSpysBySkill(string skill);
+
         List<Spy> GetAll();
+
         public bool Create(Spy value);
+    
     }
 }

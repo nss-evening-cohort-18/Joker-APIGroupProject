@@ -46,6 +46,12 @@ namespace Joker_APIGroupProject.Controllers
             return _spyRepo.GetFriendsById(id);
         }
 
+        [HttpGet("{skills}skill")]
+        public List<Spy> GetSpysBySkill(string skill)
+        {
+            return _spyRepo.GetSpysBySkill(skill);
+        }
+
 
         // POST api/<ValuesController>
         [HttpPost]
