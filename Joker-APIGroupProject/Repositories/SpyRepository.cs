@@ -24,7 +24,7 @@ namespace Joker_APIGroupProject.Repositories
                 UserName = "077",
                 Skills = new() { "Womanizer", "Poker", "Killing" },
                 Friends = new() { "SilverBosman" },
-                Enemies = new() { },
+                Enemies = new() { "Sam Fisher" },
                 OriginStory = "Orphan",
                 Services = new() { "Assassinations", "Bomb Stopping" }
             },
@@ -48,6 +48,11 @@ public List<Spy> GetAll()
         public List<string> GetEnemiesById(int id)
         {
             return _spies.FirstOrDefault(p => p.Id == id).Enemies;
+
+        }
+        public List<string> GetFriendsById(int id)
+        {
+            return _spies.FirstOrDefault(p => p.Id == id).Friends;
 
         }
 
