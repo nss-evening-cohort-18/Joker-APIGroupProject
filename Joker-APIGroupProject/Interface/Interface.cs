@@ -9,6 +9,8 @@ namespace Joker_APIGroupProject.Interface
 
         List <string> GetEnemiesById(int id);
 
+        List<string> GetFriendsById(int id);
+
         List<Spy> GetAll();
         public bool Create(Spy value);
     }
