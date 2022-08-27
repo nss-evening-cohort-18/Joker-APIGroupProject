@@ -6,9 +6,12 @@ namespace Joker_APIGroupProject.Repositories
 {
     public class SpyRepository : ISpy
     {
-        private static List<Spy> _spies = new()
+        private static List<Spy> _spies = new();
+
+        private static List<Spy> _spiesBySkill = new()
+        
         {
-            new Spy() 
+            new Spy()
             {
                 Id = 1,
                 UserName = "MojoMan",
@@ -39,8 +42,8 @@ namespace Joker_APIGroupProject.Repositories
                 Services = new() { "Assassinations", "Cover-Ups" }
             }
         };
-        
-public List<Spy> GetAll()
+
+        public List<Spy> GetAll()
         {
             return _spies;
         }
@@ -55,6 +58,7 @@ public List<Spy> GetAll()
             return _spies.FirstOrDefault(p => p.Id == id).Friends;
 
         }
+       
 
         public Spy GetById(int id)
         {
@@ -67,6 +71,20 @@ public List<Spy> GetAll()
             return true;
         }
 
-       
+        public List<Spy> GetSpysBySkill(string skill)
+        {
+            foreach(Spy spy in _spies)
+            {
+                
+                    foreach(string Skill in spy.Skills)
+                    {
+                        if (Skill == skill)
+                        {
+                            _spiesBySkill.Add(spy);
+                        }
+                    }
+            }
+            return _spiesBySkill;
+        }
     }
 }
