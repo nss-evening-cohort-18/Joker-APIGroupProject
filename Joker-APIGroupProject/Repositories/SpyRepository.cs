@@ -6,6 +6,8 @@ namespace Joker_APIGroupProject.Repositories
 {
     public class SpyRepository : ISpy
     {
+        private static List<string> _allSkills = new();
+
         private static List<Spy> _spiesBySkill = new();
 
         private static List<Spy> _spies = new()
@@ -41,6 +43,17 @@ namespace Joker_APIGroupProject.Repositories
                 Enemies = new() { "MojoMan" },
                 OriginStory = "Mommy Issues",
                 Services = new() { "Assassinations", "Cover-Ups" }
+            },
+
+            new Spy()
+            {
+                Id = 4,
+                UserName = "Sam Fisher",
+                Skills = new() {"Bongos", "Water Color", "Espionoge", "Master of Disguise"},
+                Friends = new() { },
+                Enemies = new() { "077" },
+                OriginStory = "Born in the Dark",
+                Services = new() {"Assasination", "Overthrow a Government", "Bounce Houses"}
             }
         };
 
@@ -74,18 +87,28 @@ namespace Joker_APIGroupProject.Repositories
 
         public List<Spy> GetSpysBySkill(string skill)
         {
-            foreach(Spy spy in _spies)
+
+            foreach (Spy spy in _spies)
             {
-                
-                    foreach(string Skill in spy.Skills)
+                foreach (var s in spy.Skills)
+                    if (s == skill)
                     {
-                        if (Skill == skill)
-                        {
-                            _spiesBySkill.Add(spy);
-                        }
+                        _spiesBySkill.Add(spy);
                     }
             }
             return _spiesBySkill;
+        }
+
+        public List<string> GetAllSkills()
+        {
+           foreach (var s in _spies)
+            {
+                foreach (var s2 in s.Skills)
+                {
+                    _allSkills.Add(s2);
+                }
+            }
+            return _allSkills;
         }
     }
 }
